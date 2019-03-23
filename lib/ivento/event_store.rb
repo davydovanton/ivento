@@ -109,6 +109,7 @@ module Ivento
       end
 
       class Psql
+        # TODO: Use config object here
         def initialize
           @db = Sequel.connect('postgres://localhost/todo_app_event_sourcing')
         end
