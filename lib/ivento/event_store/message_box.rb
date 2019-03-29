@@ -6,12 +6,15 @@ require 'sequel'
 module Ivento
   class EventStore
     class MessageBox < Concurrent::Actor::Context
-      def initialize(adapter = Adapters::Memory.new)
+      def initialize(adapter: Adapters::Memory.new, logger: Logger.new(STDOUT))
         @adapter = adapter
+        @logger = logger
         @subscribers = []
       end
 
       def on_message(message)
+        @logger.info(message[:type])
+
         case message[:type]
         when :get
           @adapter.get
