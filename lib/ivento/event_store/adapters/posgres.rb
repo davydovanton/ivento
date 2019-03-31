@@ -15,6 +15,7 @@ require 'sequel'
 module Ivento
   class EventStore
     module Adapters
+      # TODO: rename to SQL
       class Postgres
         def initialize(db_url)
           @db = Sequel.connect(db_url)
