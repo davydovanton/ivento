@@ -15,8 +15,6 @@ require 'sequel'
 require "ivento/event_store/message_box"
 require "ivento/event_store/subscriber"
 
-# TODO: fix require
-
 module Ivento
   class EventStore
     # TODO: fix DI for message box
