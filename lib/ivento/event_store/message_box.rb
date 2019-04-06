@@ -1,7 +1,8 @@
 require 'concurrent'
 require 'concurrent/actor'
 require 'securerandom'
-require 'sequel'
+
+require_relative './adapters/memory'
 
 module Ivento
   class EventStore

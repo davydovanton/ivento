@@ -16,7 +16,7 @@ module Ivento
   class EventStore
     module Adapters
       # TODO: rename to SQL
-      class SQL
+      class Sql
         def initialize(db_url)
           Sequel.extension :pg_json
           @db = Sequel.connect(db_url)
@@ -27,7 +27,8 @@ module Ivento
         end
 
         def get_stream(stream)
-          groupped_events[stream]
+          # TODO: if we don't have events for specific stream this method will return `{}` and `nil` instead of list of events
+          Array(groupped_events[stream])
         end
 
         def append(stream, event)
