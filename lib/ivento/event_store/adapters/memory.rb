@@ -8,9 +8,6 @@
 # Based on Concurrent/Actor
 
 require 'concurrent'
-require 'concurrent/actor'
-require 'securerandom'
-require 'sequel'
 
 module Ivento
   class EventStore

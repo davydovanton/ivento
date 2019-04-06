@@ -12,6 +12,9 @@ require 'concurrent/actor'
 require 'securerandom'
 require 'sequel'
 
+require "ivento/event_store/message_box"
+require "ivento/event_store/subscriber"
+
 # TODO: fix require
 
 module Ivento

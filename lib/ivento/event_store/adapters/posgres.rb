@@ -16,8 +16,9 @@ module Ivento
   class EventStore
     module Adapters
       # TODO: rename to SQL
-      class Postgres
+      class SQL
         def initialize(db_url)
+          Sequel.extension :pg_json
           @db = Sequel.connect(db_url)
         end
 
