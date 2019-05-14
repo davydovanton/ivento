@@ -22,7 +22,7 @@ module Ivento
         end
 
         def get_stream(stream)
-          @store[stream]
+          @store[stream] || []
         end
 
         def append(stream, event)
