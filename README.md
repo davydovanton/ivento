@@ -19,6 +19,7 @@ Or install it yourself as:
 
 ## Usage
 
+
 ### Event store
 #### Adapters
 ##### SQL
@@ -27,6 +28,10 @@ Or install it yourself as:
 #### Subscribers
 ### Projections
 ### Producers
+
+### Examples
+
+* [Simple TODO script](https://github.com/davydovanton/ivento/blob/56281e011d7a72f32f8004189b33bd087c9ab804/examples/todo.rb)
 
 ## Development
 
